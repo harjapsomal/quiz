@@ -5,11 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>window.onload() QUIZ</title>
+    <link rel="stylesheet" type="text/css" href="index.css" media="screen" />
+    <script type="text/javascript" src="index.js"></script>
   </head>
   <body>
     <div>
-      <img src="quiz1.jpg" alt="" />
-      <form action=""></form>
+      <img src="quiz1.jpg" alt="" width="500" height="200" />
     </div>
   </body>
   <div id="start">
@@ -22,6 +23,7 @@
       />
     </form>
   </div>
+  <h1 id="score_text">Your score is <span id="score">0</span></h1>
 
   <div id="q1">
     <form>
@@ -35,7 +37,7 @@
       <input name="q1" type="radio" value="Edinburgh" />Edinburgh<br />
       <input
         type="button"
-        value="Submit Answer"
+        value="Next Question"
         onclick="NextQuestion('q1','q2',document.querySelector('input[name=q1]:checked').value, 
         'Edinburgh')"
       />
@@ -54,7 +56,7 @@
       <input name="q2" type="radio" value="525" />525<br />
       <input
         type="button"
-        value="Submit Answer"
+        value="Next Question"
         onclick="NextQuestion('q2','q3',document.querySelector('input[name=q2]:checked').value, 
       '625')"
       />
@@ -77,7 +79,7 @@
       <input name="q3" type="radio" value="Explorer" />Explorer<br />
       <input
         type="button"
-        value="Submit Answer"
+        value="Next Question"
         onclick="NextQuestion('q3','q4',document.querySelector('input[name=q3]:checked').value, 
       'Rock Star')"
       />
@@ -100,7 +102,7 @@
       <input name="q4" type="radio" value="Henry Cooper" />Henry Cooper<br />
       <input
         type="button"
-        value="Submit Answer"
+        value="Next Question"
         onclick="NextQuestion('q4','q5',document.querySelector('input[name=q4]:checked').value, 
       'Muhammed Ali')"
       />
@@ -122,7 +124,7 @@
       <input name="q5" type="radio" value="Australia" />Australia<br />
       <input
         type="button"
-        value="Submit Answer"
+        value="Next Question"
         onclick="NextQuestion('q5','q6',document.querySelector('input[name=q5]:checked').value, 
       'South Africa')"
       />
@@ -146,59 +148,10 @@
       <input name="q6" type="radio" value="The Pope" />The Pope<br />
       <input
         type="button"
-        value="Submit Answer"
+        value="Next Question"
         onclick="NextQuestion('q6','Finished',document.querySelector('input[name=q6]:checked').value, 
       'Archbishop of Canterbury')"
       />
     </form>
   </div>
-  <!-- keep running total of correct answers for later
-            clear the question from page ready for next question -->
-  <script>
-    window.onload = function () {
-      Visible("q1", false); //make each question invisible
-      Visible("q2", false);
-      Visible("q3", false);
-      Visible("q4", false);
-      Visible("q5", false);
-      Visible("q6", false);
-    };
-
-    function startQuiz() {
-      console.log("startQuiz called");
-      // clear the screen
-      //display first question
-      document.getElementById("start").style.display = "none";
-      Visible("q1", true); //make Q1 only visible
-    }
-
-    function Visible(vis_id, vis_invis) {
-      //if vis_invis == true , then make it visible, else invisible
-      if (vis_invis == true) {
-        document.getElementById(vis_id).style.display = "block";
-      } else if (vis_invis == false) {
-        document.getElementById(vis_id).style.display = "none";
-      } else {
-        console.log("func Visible() has been passed second param wrongly");
-      }
-    }
-
-    var running_tot_correct = 0; // declared outside function to keep value
-    function NextQuestion(q1, q2, answer, actual_answer) {
-      // answer means given answer, and this needs to be compared to the actual_answer
-      //prepare for next question
-      // make q1 invisible and make q2 visible
-      console.log(answer);
-      if (answer === actual_answer) {
-        running_tot_correct += 1;
-        console.log(running_tot_correct);
-      }
-      Visible(q1, false); // make q1 invisible
-      if (q2 !== "Finished") {
-        Visible(q2, true); //make q2 visible
-      } else {
-        console.log("FINAL SCORE", running_tot_correct);
-      }
-    }
-  </script>
 </html>

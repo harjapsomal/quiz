@@ -1,0 +1,15 @@
+body {
+  border: 2px solid powderblue;
+  margin: 80px;
+  align-content: center;
+}
+form {
+  border: 2px solid powderblue;
+  margin: 30px;
+  align-content: center;
+  text-align: left;
+}
+button {
+  align-self: center;
+  font-size: large;
+}
