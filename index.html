@@ -23,22 +23,22 @@
       />
     </form>
   </div>
-  <h1 id="score_text">Your score is <span id="score">0</span></h1>
+  <h2 id="score_text">
+    Your score is
+    <span id="score">"score"</span>
+  </h2>
 
   <div id="q1">
     <form>
       <!-- first question -->
-      Question 1:
-      <label for="Capital">Capital</label>
-      <input type="text" name="q1" placeholder="Capital of Scotland?" />
-      <br />
+      <h3>Question 1: What is the capital of Scotland?</h3>
       <input name="q1" type="radio" value="Glasgow" />Glasgow<br />
       <input name="q1" type="radio" value="Aberdeen" />Aberdeen<br />
       <input name="q1" type="radio" value="Edinburgh" />Edinburgh<br />
       <input
         type="button"
         value="Next Question"
-        onclick="NextQuestion('q1','q2',document.querySelector('input[name=q1]:checked').value, 
+        onclick="nextQuestion('q1','q2',document.querySelector('input[name=q1]:checked').value, 
         'Edinburgh')"
       />
     </form>
@@ -47,17 +47,14 @@
   <div id="q2">
     <form>
       <!-- second question -->
-      <br /><br />
-      Question 2:
-      <input type="text" name="25 squared" placeholder="What is 25 squared?" />
-      <br />
+      <h3>Question 2: What is 25 squared?</h3>
       <input name="q2" type="radio" value="50" />50<br />
       <input name="q2" type="radio" value="625" />625<br />
       <input name="q2" type="radio" value="525" />525<br />
       <input
         type="button"
         value="Next Question"
-        onclick="NextQuestion('q2','q3',document.querySelector('input[name=q2]:checked').value, 
+        onclick="nextQuestion('q2','q3',document.querySelector('input[name=q2]:checked').value, 
       '625')"
       />
     </form>
@@ -66,21 +63,15 @@
   <div id="q3">
     <form>
       <!-- third question -->
-      <br /><br />
-      Question 3:
-      <input
-        type="text"
-        name="Michael Jackson"
-        placeholder="Michael Jackson was a "
-      />
-      <br />
+      <h3>Question 3: Michael Jackson was a ....</h3>
+
       <input name="q3" type="radio" value="Rock Star" />Rock Star<br />
       <input name="q3" type="radio" value="Astronomer" />Astronomer<br />
       <input name="q3" type="radio" value="Explorer" />Explorer<br />
       <input
         type="button"
         value="Next Question"
-        onclick="NextQuestion('q3','q4',document.querySelector('input[name=q3]:checked').value, 
+        onclick="nextQuestion('q3','q4',document.querySelector('input[name=q3]:checked').value, 
       'Rock Star')"
       />
     </form>
@@ -89,21 +80,15 @@
   <div id="q4">
     <form>
       <!-- forth question -->
-      <br /><br />
-      Question 4:
-      <input
-        type="text"
-        name="The Greatest"
-        placeholder="Known as the Greatest? "
-      />
-      <br />
+      <h3>Question 4: Who was known as "The Greatest?"</h3>
+
       <input name="q4" type="radio" value="Mike Tyson" />Mike Tyson<br />
       <input name="q4" type="radio" value="Muhammed Ali" />Muhammed Ali<br />
       <input name="q4" type="radio" value="Henry Cooper" />Henry Cooper<br />
       <input
         type="button"
         value="Next Question"
-        onclick="NextQuestion('q4','q5',document.querySelector('input[name=q4]:checked').value, 
+        onclick="nextQuestion('q4','q5',document.querySelector('input[name=q4]:checked').value, 
       'Muhammed Ali')"
       />
     </form>
@@ -111,21 +96,14 @@
   <div id="q5">
     <form>
       <!-- fifth question -->
-      <br /><br />
-      Question 5:
-      <input
-        type="text"
-        name="Cape Town"
-        placeholder="Cape Town is a city in: "
-      />
-      <br />
+      <h3>Question 5: Cape Town is a city, in which country?</h3>
       <input name="q5" type="radio" value="New Zealand" />New Zealand<br />
       <input name="q5" type="radio" value="South Africa" />South Africa<br />
       <input name="q5" type="radio" value="Australia" />Australia<br />
       <input
         type="button"
         value="Next Question"
-        onclick="NextQuestion('q5','q6',document.querySelector('input[name=q5]:checked').value, 
+        onclick="nextQuestion('q5','q6',document.querySelector('input[name=q5]:checked').value, 
       'South Africa')"
       />
     </form>
@@ -133,14 +111,7 @@
   <div id="q6">
     <form>
       <!-- sixth question -->
-      <br /><br />
-      Question 6:
-      <input
-        type="text"
-        name="Head COE"
-        placeholder="Head of the Church of England?"
-      />
-      <br />
+      <h3>Question 6: Who is the Head of the Church of England?"</h3>
       <input name="q6" type="radio" value="Bishop of Winchester" />Bishop of
       Winchester<br />
       <input name="q6" type="radio" value="Archbishop of Canterbury" />The
@@ -149,7 +120,7 @@
       <input
         type="button"
         value="Next Question"
-        onclick="NextQuestion('q6','Finished',document.querySelector('input[name=q6]:checked').value, 
+        onclick="nextQuestion('q6','Finished',document.querySelector('input[name=q6]:checked').value, 
       'Archbishop of Canterbury')"
       />
     </form>
